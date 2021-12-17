@@ -18,7 +18,7 @@ export class NotesService {
     private noteBoardsRepository: Repository<NoteBoard>,
     @InjectRepository(User)
     private userRepository: Repository<User>,
-  ) {}
+  ) { }
 
   async createBoard(flat: Flat): Promise<NoteBoard> {
     const noteBoard = this.noteBoardsRepository.create({ flat });
