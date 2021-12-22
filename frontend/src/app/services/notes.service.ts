@@ -31,10 +31,10 @@ export class NotesService {
 
   get() {
     this.http
-        .get<NoteStructure[]>(`${environment.baseUrl}/notes/boards/${this.flat.id}`)
-        .subscribe((notes) => {
-          this._currentNotes.next(notes);
-        });
+      .get<NoteStructure[]>(`${environment.baseUrl}/notes/boards/${this.flat.id}`)
+      .subscribe((notes) => {
+        this._currentNotes.next(notes);
+      });
   }
 
   create(titleValue: string, descriptionValue: string) {
@@ -44,7 +44,7 @@ export class NotesService {
         description: descriptionValue
       }).subscribe(
         (note) => this.get()
-        );
+      );
   }
 
   update(noteId: number, titleValue: string, descriptionValue: string) {

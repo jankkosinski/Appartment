@@ -1,12 +1,12 @@
-<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap
-    fxLayoutGap="20px" fxLayoutAlign="center">
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="20px" fxLayoutAlign="center">
     <div fxFlex="25%">
         <app-page-card>
             <div fxLayout="column">
                 <img mat-card-image style="border-radius: 5px; margin-bottom: 20px;" [src]="getImg()">
                 <mat-card-title>{{userData.name}}</mat-card-title>
                 <mat-card-subtitle>{{userData.email}}</mat-card-subtitle>
-                <mat-card-subtitle> <span style="color: white">Your scroe:</span> {{userData.score}} </mat-card-subtitle>
+                <mat-card-subtitle> <span style="color: white">Your scroe:</span> {{userData.score}}
+                </mat-card-subtitle>
             </div>
             <mat-card-content *ngIf="!(flatUsers.length == 0)">
                 <div style="margin-bottom: 2px; font-size: large">Flatmates:</div>
@@ -34,7 +34,7 @@
             <mat-card-subtitle>Flat notes:</mat-card-subtitle>
             <mat-card-content>
                 <div *ngIf="!(flatNotes.length == 0)" class="note-boundary">
-                    <app-note *ngFor="let itemNote of flatNotes" (dblclick)="openNoteDialog(itemNote)"> 
+                    <app-note *ngFor="let itemNote of flatNotes" (dblclick)="openNoteDialog(itemNote)">
                         <h3 style="margin-bottom: 2px;">{{itemNote.title}}</h3>
                         <span>{{itemNote.description}}</span>
                         <div>
@@ -43,7 +43,9 @@
                     </app-note>
                 </div>
                 <div *ngIf="flatNotes.length == 0" class="note-boundary">
-                    <app-note><h1>There are not any flat notes!</h1></app-note>
+                    <app-note>
+                        <h1>There are not any flat notes!</h1>
+                    </app-note>
                 </div>
             </mat-card-content>
             <mat-card-actions>
@@ -56,7 +58,8 @@
         </app-page-card>
         <app-page-card *ngIf="flat == null">
             <app-note>
-                <h1>You are not assigned to any flat. Create your own or join to your friends to unlock the functionality!</h1>
+                <h1>You are not assigned to any flat. Create your own or join to your friends to unlock the
+                    functionality!</h1>
             </app-note>
         </app-page-card>
     </div>
