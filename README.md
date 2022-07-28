@@ -1,5 +1,5 @@
 # Appartment
 Angular project for flatmates.
 
-This repository was moved here from my old students account.
+This repository was prepared as students project.
 This project was prepared in a groups.
